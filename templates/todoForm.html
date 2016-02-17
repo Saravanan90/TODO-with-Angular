@@ -1,0 +1,13 @@
+<div class="panel panel-default todo-list">
+	<div class="panel-heading">Add to my TODO</div>
+	<div class="panel-body">
+		<form name="todoform" role="form" novalidate>
+		  <div class="form-group">
+		    <label for="activity">Activity:</label>
+		    <input type="text" ng-model="todo.activity" class="form-control" id="activity" required>
+		  </div>
+		  <button ng-disabled="todoform.$invalid" type="submit" ng-click="addToTodo()" class="btn btn-default">Add</button>
+		</form>
+	</div>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="panel panel-default todo-list">
+	<div class="panel-heading"><h4>My TODO</h4></div>
+	<div class="panel-body">
+		<span class="label label-info">Show</span>
+		<label class="radio-inline"><input type="radio" ng-model="showOpt" value="all">All</label>
+		<label class="radio-inline"><input type="radio" ng-model="showOpt" value="marked">Marked</label>
+		<label class="radio-inline"><input type="radio" ng-model="showOpt" value="unmarked">Unmarked</label>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="todo in todos | filter: statusCheck">
+				{{todo.label}}
+				<input class="badge" type="checkbox" ng-model="checked" ng-checked="todo.completed" ng-change="updateStatus(todo)" />
+			</li>
+		</ul>
+	</div>
+</div>
